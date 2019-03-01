@@ -135,7 +135,7 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 	case DLL_PROCESS_DETACH:
 	{
 		/* save settings */
-		saveSettings();
+		// saveSettings();
 
 		hexEdit1.destroy();
 		hexEdit2.destroy();
@@ -352,7 +352,7 @@ void loadSettings(void)
 	::PathAppend(cmparePath, COMPARE_PATH);
 	if (::PathFileExists(cmparePath) == FALSE)
 	{
-		::CreateDirectory(cmparePath, NULL);
+		//::CreateDirectory(cmparePath, NULL);
 	}
 
 	/* init INI file path */
